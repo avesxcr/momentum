@@ -55,6 +55,12 @@ body {
 
 .play-item:hover {
   opacity: 1;
+  font-size: 20px;
+}
+
+.play-item:focus {
+  opacity: 1;
+  font-size: 20px;
 }
 
 .play-item::before {
@@ -263,6 +269,8 @@ body {
 .author {
   min-height: 20px;
 }
+
+
 
 @media (max-width: 768px) {
   .time {
