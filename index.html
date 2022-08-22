@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="assets/favicon.ico" rel="shortcut icon" />
   <link rel="stylesheet" href="css/owfont-regular.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <title>momentum</title>
 </head>
 <body>
   <header class="header">
    
     <div class="player">
-      <button class="lang">lang</button>
+    
       <div class="player-controls">
         <button class="play-prev player-icon"></button>
         <button class="play player-icon"></button>
@@ -44,15 +46,94 @@
       <span class="greeting"></span>
       <input type="text" class="name"/>
     </div>
+    
   </main>
   <footer class="footer">
+  
     <button class="change-quote"></button>
     <div>
       <div class="quote"></div>
       <div class="author"></div>
     </div>
+    <div class="todo-container">
+      <h1 class="todo-title">Список дел</h1>
+      <div class="todo-select">
+      <input type="checkbox" class="tasks" id="select-all"> Всего <span id="total">0 </span> задач(а).
+        <button class="delete--button" id="delete"></button>
+      </div>
+      <div class="todo-list" id="list">
+      </div>
+      <div class="todo-action">
+        <input class="todo-item" type="text" id="item">
+        <button class="add--button" id="add">Добавить</button><br>
+        <button class="close-todolist">Закрыть список дел</button>
+      </div>
+      <p class="todo-notify" id="notify"></p>
+      </div>
+    <div class="settings--footer">
+      <button class="settings--footer__button" id="button__modal--button">Настройки</button><br>
+      <div id="modal-window" class="modal">
+          <div class="modal-content">
+              <span class="close"></span>
+              <h1 class="footer--h1">Настройки приложения</h1>
+              <div class="footer--checkboxes">
+              <div>
+                  <input type="checkbox" class="time-checkbox" id="time" checked>
+                  <label class="time-label" for="time">Время</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="dates" class="date-checkbox" checked>
+                  <label class ="date-label "for="dates">Дата</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="greeting" class="greeting-checkbox" checked>
+                  <label class="greeting-label" for="greeting">Приветствие</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="quote" class="quote-checkbox" checked>
+                  <label class="quote-label" for="quote">Случайная цитата</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="weather" class="weather-checkbox" checked>
+                  <label class="weather-label" for="weather">Погода</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="audio" class="audio-checkbox" checked>
+                  <label class="audio-label" for="audio">Плеер</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="todolist" class="todolist-checkbox" checked>
+                  <label class="todolist-label" for="todolist">Список дел</label>
+                </div>
+              </div>
+              <div class="todolist--wrapper">
+                  <button class="change-lang">Сменить язык</button>
+              </div>
+              <div class="todolist--wrapper">
+                <button class="todolist--button">Отобразить список дел</button>
+            </div>
+                <div>
+                  <p class="footer--change-source">Сменить источник получения фото:</p>
+                  <div class="footer--change-source__buttons">
+                  <button class="flickr">Flickr</button>
+                  <button class="github">Github</button>
+                  <button class="unsplash">Unsplash</button>
+                </div>
+                  <p class="footer--theme-of-photo">Указать тематику фонового изображения</p>
+                  <form><input type="text" class="search-photo"></form>
+                  <div class="footer--button__wrapper">
+                    <button class="change-photo">Изменить</button>
+                  </div>
+                  <div class="footer--credentials">
+                    <a href="https://github.com/avesxcr"><img class="github" src="../assets/img/GitHub-Mark-Light-32px.png" alt="github" ></a>
+                  </div>
+                </div>
+          </div>
+      </div>
+    </div>
   </footer>
   <script type="module" src="js/script.js"></script>
   <script type="module" src="js/playList.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 </html>
